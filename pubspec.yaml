@@ -67,6 +67,7 @@ dependencies:
   loader_overlay: ^4.0.0
   #toast
   toastification: ^2.0.0
+  dashed_circular_progress_bar: ^0.0.6
 
   
 
