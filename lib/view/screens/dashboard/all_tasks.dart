@@ -1,5 +1,6 @@
 import 'package:danapp/res/import/import.dart';
 import 'package:danapp/view/screens/dashboard/dashboard.dart';
+import 'package:danapp/view/screens/projects/add_task.dart';
 
 class AllTasks extends StatefulWidget {
   const AllTasks({super.key});
@@ -37,7 +38,21 @@ class _AllTasksState extends State<AllTasks> {
               Expanded(
                 child: ListView.separated(
                   itemCount: 5,
-                  itemBuilder: (context, index) => const TaskWidget(),
+                  itemBuilder: (context, index) => GestureDetector(
+                    onTap: () {
+                       Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.rightToLeft,
+                            child: const AddTask(
+                              isEdit: true,
+                            ),
+                            duration: const Duration(milliseconds: 150),
+                            curve: Curves.decelerate,
+                            ctx: context),
+                      );
+                    },
+                    child: const TaskWidget()),
                   separatorBuilder: (context, index) => const YMargin(16),
                 ),
               ),

@@ -1,4 +1,6 @@
 import 'package:danapp/res/import/import.dart';
+import 'package:danapp/view/screens/projects/add_task.dart';
+import 'package:danapp/view/screens/projects/create_project.dart';
 
 class Project extends StatefulWidget {
   const Project({super.key});
@@ -29,7 +31,17 @@ class _ProjectState extends State<Project> {
                       title: 'Create Project',
                       textSize: 9.sp,
                       radius: BorderRadius.circular(3),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.rightToLeft,
+                              child: const CreateProject(),
+                              duration: const Duration(milliseconds: 150),
+                              curve: Curves.decelerate,
+                              ctx: context),
+                        );
+                      },
                       textColor: danappPrimaryColor,
                       buttonColor: danappTransparent,
                       borderColor: danappPrimaryColor,
@@ -178,7 +190,19 @@ class _ProjectWidgetState extends State<ProjectWidget> {
                     title: 'Add Task',
                     textSize: 10.sp,
                     radius: BorderRadius.circular(3),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.rightToLeft,
+                            child: const AddTask(
+                              isEdit: false,
+                            ),
+                            duration: const Duration(milliseconds: 150),
+                            curve: Curves.decelerate,
+                            ctx: context),
+                      );
+                    },
                     textColor: danappPrimaryColor,
                     buttonColor: danappTransparent,
                     borderColor: danappPrimaryColor,
