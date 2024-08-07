@@ -138,10 +138,13 @@ class _CustomAppBar1State extends State<CustomAppBar1> {
         ]);
   }
 }
-class BackButton extends StatelessWidget {
-  const BackButton({
+
+class CustomBackButton extends StatelessWidget {
+  const CustomBackButton({
     super.key,
+    this.onTap,
   });
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -158,11 +161,12 @@ class BackButton extends StatelessWidget {
             )),
         child: Center(
           child: GestureDetector(
-            onTap: () {
-              if (Navigator.canPop(context)) {
-                Navigator.pop(context);
-              }
-            },
+            onTap: onTap ??
+                () {
+                  if (Navigator.canPop(context)) {
+                    Navigator.pop(context);
+                  }
+                },
             child: Image.asset(
               'assets/images/mobile/Chevron-left.png',
               width: 24.sp,

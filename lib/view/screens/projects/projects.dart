@@ -1,4 +1,5 @@
 import 'package:danapp/res/import/import.dart';
+
 import 'package:danapp/view/screens/projects/add_task.dart';
 import 'package:danapp/view/screens/projects/create_project.dart';
 
@@ -22,7 +23,7 @@ class _ProjectState extends State<Project> {
             children: [
               Row(
                 children: [
-                  const BackButton(),
+                  const CustomBackButton(),
                   const Spacer(),
                   SizedBox(
                     width: 98.29.sp,

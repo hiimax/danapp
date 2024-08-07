@@ -41,3 +41,4 @@ const Color danappColor22 = Color(0xffFFE5BE);
 const Color danappColor23 = Color(0xffC0E2FF);
 const Color danappColor24 = Color(0xff9EFFCC);
 const Color danappColor25 = Color(0xffFF4800);
+const Color danappColor26 = Color(0xff242525);

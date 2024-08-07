@@ -66,7 +66,7 @@ class _CreateProjectState extends State<CreateProject> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const BackButton(),
+                const CustomBackButton(),
                 const YMargin(12),
                 Text(
                   'Create Project',

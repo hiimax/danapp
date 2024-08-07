@@ -22,8 +22,7 @@ class _AllTasksState extends State<AllTasks> {
             children: [
               Row(
                 children: [
-                  const BackButton(),
-                  
+                  const CustomBackButton(),
                 ],
               ),
               const YMargin(12),
@@ -39,20 +38,20 @@ class _AllTasksState extends State<AllTasks> {
                 child: ListView.separated(
                   itemCount: 5,
                   itemBuilder: (context, index) => GestureDetector(
-                    onTap: () {
-                       Navigator.push(
-                        context,
-                        PageTransition(
-                            type: PageTransitionType.rightToLeft,
-                            child: const AddTask(
-                              isEdit: true,
-                            ),
-                            duration: const Duration(milliseconds: 150),
-                            curve: Curves.decelerate,
-                            ctx: context),
-                      );
-                    },
-                    child: const TaskWidget()),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.rightToLeft,
+                              child: const AddTask(
+                                isEdit: true,
+                              ),
+                              duration: const Duration(milliseconds: 150),
+                              curve: Curves.decelerate,
+                              ctx: context),
+                        );
+                      },
+                      child: const TaskWidget()),
                   separatorBuilder: (context, index) => const YMargin(16),
                 ),
               ),
