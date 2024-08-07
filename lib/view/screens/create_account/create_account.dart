@@ -78,7 +78,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen>
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const BackButton(),
+                const CustomBackButton(),
                 const YMargin(16),
                 Text(
                   'Create \nAccount',

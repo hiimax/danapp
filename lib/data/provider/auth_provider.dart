@@ -17,13 +17,4 @@ class AuthenticationProvider extends ChangeNotifier {
     _instance ??= AuthenticationProvider();
     return _instance!;
   }
-
-  String _customerType = 'customer';
-
-  String get customerType => _customerType;
-
-  set customerType(String value) {
-    _customerType = value;
-    notifyListeners();
-  }
 }
